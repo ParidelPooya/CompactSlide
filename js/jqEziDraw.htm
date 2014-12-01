@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="jqEziDraw.css" />
+    <title>eziConfirm Samples</title>
+    <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jqEziColor.js"></script>
+    <script type="text/javascript" src="jqEziDrawHelper.js"></script>
+    <script type="text/javascript" src="jqEziDrawHistory.js"></script>
+    <script type="text/javascript" src="jqEziDrawDragDrop.js"></script>
+    <script type="text/javascript" src="jqEziDrawShapes.js"></script>
+    <script type="text/javascript" src="jqEziDrawToolbar.js"></script>
+    <script type="text/javascript" src="jqEziDrawPages.js"></script>
+    <script type="text/javascript" src="jqEziDrawTemplates.js"></script>
+    <script type="text/javascript" src="jqEziDraw.js"></script>
+    <script type="text/javascript" src="jqEziProperties.js"></script>
+    <link rel="stylesheet" type="text/css" href="eziConfirm.css" />
+    <script type="text/javascript" src="eziConfirm.js"></script>
+</head>
+<body>
+    <div id='Menu' style='height: 35px;'></div>
+    <div class='ToolsBox' id='tools'></div>
+    <div id="ConvasContainer">
+        <div id="myCanvasDiv" class="CanvasSize"><canvas class="CanvasSize" id="myCanvas"></canvas></div>
+    </div>
+    
+    <div style='display: inline-block; width: 214px; vertical-align: top;'>
+        <div class='HistoryBox' style='border: 1px solid #000;'>
+            <div style='color: #000000; text-align: center'>Pages</div>
+            <div id='pages'>
+                <div></div>
+                <div style='height: 150px; vertical-align: top; overflow-y: scroll;overflow-x: none;'></div>
+            </div>
+        </div>
+        <div class='HistoryBox' style='border: 1px solid #000;'>
+            <div style='color: #000000; text-align: center'>Shapes</div>
+            <div id='history' style='height: 220px; vertical-align: top; overflow-y: scroll;overflow-x: none;'></div>
+        </div>
+        <div class='StyleBox' style='border: 1px solid #000;'>
+            <div style='color: #000000; text-align: center'>Style</div>
+            <table id='ShapeStyle' style='height: 70px; vertical-align: top; overflow-y: none;
+                overflow-x: none;'>
+            </table>
+        </div>
+        <img id="TinyImage" width="210" style="margin-left:1px;border:1px solid black" heigth="120"></canvas>
+    </div>
+    <script>
+        //var MyObject = Math;
+
+//        (function () {
+//            var a = 1;
+
+//            $.fn1 = function () { alert(1); };
+
+//        })();
+
+//        $.fn1();
+
+        function sample1() {
+
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = 'hidden';
+            document.body.scroll = "no";
+
+            $('#myCanvas').eziDraw({ menu: '#Menu', shapeStyle: '#ShapeStyle', tools: '#tools', history: '#history', pages: '#pages' });
+
+        }
+
+        sample1();
+
+        //        function draw() {
+        //            var ctx = document.getElementById('myCanvas').getContext('2d');
+        //            var img = new Image();
+        //            var f = document.getElementById("uploadimage").files[0];
+        //            var url = window.URL || window.webkitURL;
+        //            var src = url.createObjectURL(f);
+
+        //            img.src = src;
+        //            img.onload = function () {
+        //                ctx.drawImage(img, 0, 0);
+        //                url.revokeObjectURL(src);
+        //            }
+        //        }
+        //    </script>
+</body>
+</html>
